@@ -125,6 +125,14 @@
 			let email = document.getElementById("user_email").value
 			let phone = document.getElementById("user_phone").value
 			// Создадим проверки на случай неверного заполнения данных самим пользователем, в данном случае телефон
+			if (name.length < 5) {
+				document.getElementById("error").innerText = "Ошибка в Имени"
+				return
+			}
+			if (email.length < 5) {
+				document.getElementById("error").innerText = "Ошибка в email"
+				return
+			}
 			if (phone.length < 5) {
 				document.getElementById("error").innerText = "Ошибка в номере телефона"
 				return
